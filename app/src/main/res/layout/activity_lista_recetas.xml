@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".listaRecetas">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- CONTENEDOR DE CATEGORÍAS -->
+        <LinearLayout
+            android:id="@+id/categoryContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="130dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/ivReposteria"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/bebidasnueva"
+                android:clickable="true"
+                android:contentDescription="Repostería"
+                android:focusable="true"
+                android:onClick="filtradoBebidas"
+                android:padding="4dp"
+                app:srcCompat="@drawable/borde_grueso" />
+
+            <ImageView
+                android:id="@+id/ivBebidas"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/platofuertenueva"
+                android:clickable="true"
+                android:contentDescription="Bebidas"
+                android:focusable="true"
+                android:onClick="filtradoPlatoFuerte"
+                android:padding="4dp"
+                app:srcCompat="@drawable/borde_grueso" />
+
+            <ImageView
+                android:id="@+id/ivPlatosFuertes"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/reposterianueva"
+                android:clickable="true"
+                android:contentDescription="Platos Fuertes"
+                android:focusable="true"
+                android:onClick="filtradoReposteria"
+                android:padding="4dp"
+                app:srcCompat="@drawable/borde_grueso" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/headerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/et1Titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Listado de Recetas"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Scroll de recetas -->
+        <!-- Scroll de recetas -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="476dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="80dp"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- Receta 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="#040404"
+                    app:strokeWidth="6dp">
+
+                    <LinearLayout
+                        android:id="@+id/layoutReceta1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#1597d4"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginEnd="8dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/hielbebida" />
+
+                        <TextView
+                            android:id="@+id/tvDescripcion1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingStart="12dp"
+                            android:shadowColor="#000000"
+                            android:shadowDy="1"
+                            android:shadowRadius="1"
+                            android:text="Hiel: La bebida caribeña definitiva: refrescante, cítrica y con el equilibrio perfecto entre dulce y picante."
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Receta 2 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="#FF0000"
+                    app:strokeWidth="2dp">
+
+                    <LinearLayout
+                        android:id="@+id/layoutReceta2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fc641f"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginEnd="8dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/arrozconcocoplatofuerte" />
+
+                        <TextView
+                            android:id="@+id/tvDescripcion2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingStart="12dp"
+                            android:shadowColor="#000000"
+                            android:shadowDy="1"
+                            android:shadowRadius="1"
+                            android:text="Arroz con Coco: Un deleite tropical donde el arroz se impregna del dulce y cremoso sabor del coco."
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Receta 3 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="#FF0000"
+                    app:strokeWidth="2dp">
+
+                    <LinearLayout
+                        android:id="@+id/layoutReceta3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#3fb64c"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginEnd="8dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/budindeyucareposteria" />
+
+                        <TextView
+                            android:id="@+id/tvDescripcion3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingStart="12dp"
+                            android:shadowColor="#000000"
+                            android:shadowDy="1"
+                            android:shadowRadius="1"
+                            android:text="Budín de Yuca: Un postre casero y reconfortante, con la riqueza de la yuca y un aroma especiado que enamora. "
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Receta 4 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="#FF0000"
+                    app:strokeWidth="2dp">
+
+                    <LinearLayout
+                        android:id="@+id/layoutReceta4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fc641f"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginEnd="8dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/carneensalsacaribenaplatofuerte" />
+
+                        <TextView
+                            android:id="@+id/tvDescripcion4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingStart="12dp"
+                            android:shadowColor="#000000"
+                            android:shadowDy="1"
+                            android:shadowRadius="1"
+                            android:text="Carne en Salsa Caribeña: Costilla tierna bañada en una explosión de sabores caribeños con leche de coco y especias."
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Receta 5 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="#FF0000"
+                    app:strokeWidth="2dp">
+
+                    <LinearLayout
+                        android:id="@+id/layoutReceta5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#3fb64c"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginEnd="8dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/arepasdebananoreposteria" />
+
+                        <TextView
+                            android:id="@+id/tvDescripcion5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingStart="12dp"
+                            android:shadowColor="#000000"
+                            android:shadowDy="1"
+                            android:shadowRadius="1"
+                            android:text="Arepa de Banano: Pequeños bocados dorados y dulces, perfectos para cualquier momento, con el toque exótico del banano. "
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
