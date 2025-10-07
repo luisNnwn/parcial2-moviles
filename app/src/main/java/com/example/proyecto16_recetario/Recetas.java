@@ -41,7 +41,7 @@ public class Recetas implements Serializable {
         return pasos;
     }
 
-    // Setters si necesitas modificar después
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
